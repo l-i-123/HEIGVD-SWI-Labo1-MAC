@@ -5,14 +5,12 @@ Nuno Miguel Cerca Abrantes Silva, Elie N'djoli
 
 """
 
-#from scapy.layers.l2 import *
 from scapy.all import *
 import urllib.request as urllib2
 import sys
 import json
 import codecs
 
-#ap_list = []
 url = "http://macvendors.co/api/"
 tab = {}
 
@@ -62,6 +60,3 @@ def packetHandler(packet):
                     print(str(tab[addr2]))
 
 sniff(iface="wlan0mon", prn=packetHandler)
-                                
-
-#print(ap_list)
